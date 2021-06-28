@@ -32,7 +32,7 @@ contract Products {
     event ProductAdded(uint _pID);
     event ProductAddedFailed(uint _pID);
     event ProductDeleted(uint _pID);
-    event  ProductDeletionFailed(uint _pID);
+    event ProductDeletionFailed(uint _pID);
     
     // Modifier: Only Owner see if msg.sender == owner of the contract
     modifier onlyOwner() {
@@ -63,7 +63,7 @@ contract Products {
     }
     
     
-    function addProduct(uint _pID, string memory _pName, uint _MSP, uint _sellingPrice, string memory _stateIs, address _seller) onlyOwner public returns (bool success) {
+    function addProduct(string memory _pName, uint _MSP, uint _sellingPrice) onlyOwner public {
         // Increment product
         productCount = productCount + 1;
         
@@ -76,20 +76,14 @@ contract Products {
          
     }
     
-     function removeProduct(uint _pID) public onlyOwner returns (bool success) {
-         product = products[_pID];
-         if (product == _pID) {
+     function removeProduct(uint _pID) public onlyOwner {
              delete products[_pID];
-             ProductDeleted(_pID);
-             return true;
-         }
-        ProductDeletionFailed(_pID);
-        return false;
-    }
+ }
 
-
-    function updateProduct() external onlyOwner {
-        
+    function updateProduct(uint _pID, string memory _pName, uint _MSP, uint _sellingPrice) public onlyOwner {
+        products[_pID].pName = _pName;
+        products[_pID].MSP = _MSP;
+        products[_pID].sellingPrice = _sellingPrice;
     }
     
     // fetch the price from external source at the time of execution
