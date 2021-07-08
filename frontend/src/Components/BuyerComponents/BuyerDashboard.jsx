@@ -17,12 +17,13 @@ const BuyerDashboard = () => {
 						<AccountCircleIcon fontSize="large" style={{color:"white", fontSize:60}}/>	<br/>
 						Address<br/>
 						<Button variant="outlined" size="small"> Edit Profile </Button>
-						<hr style={{width:"75%", size:10, color:"black"}}/>
+						<hr style={{width:"100%", size:10, color:"black"}}/>
 						
 						<Button  size="large" style={{width:"100%", textTransform:"capitalize"}}>Add Order</Button><br/>
-						<Button  size="medium" style={{width:"100%"}}>View Previous Orders</Button><br/>
-						<Button  size="medium" style={{width:"100%"}}>View Transaction History</Button><br/>
-						<Button  size="medium" style={{width:"100%"}}>Open Seller Marketplace</Button>
+						<Button  size="large" style={{width:"100%", textTransform:"capitalize"}}>View Previous Orders</Button><br/>
+						<Button  size="large" style={{width:"100%", textTransform:"capitalize"}}>View Transaction History</Button><br/>
+						<hr style={{width:"75%", size:10, color:"black"}}/>
+						<Button  size="large" style={{width:"100%", textTransform:"capitalize"}}>Open Seller Marketplace</Button>
 						</center>
 					</Col>
 					<Col style={{height:"100%"}}>
