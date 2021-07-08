@@ -5,7 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import nature from '../../Images/nature.svg';
 import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -20,8 +21,8 @@ const HomePage = () => {
                     <center><span style={{color:"#64b5f6", weight:"italic", fontSize:"150%"}}><em>“Transparent crop marketplace to track agreements for selling crops to vendors and facilitate the purchase of crops without middlemen.”</em></span></center>
                     <br/><br/>
                     <center>
-                        <Button variant="primary" size="lg">Buy Products</Button> &nbsp; &nbsp;
-                        <Button variant="outline-primary" size="lg">Sell Products</Button>
+                        <Link to="/buyerdashboard"><Button variant="primary" size="lg">Buy Products</Button></Link> &nbsp; &nbsp;
+                        <Link to="/sellerdashboard"><Button variant="outline-primary" size="lg">Sell Products</Button></Link>
                     </center>
                     <br/><br/>
                     <Button variant="link" size="lg">Learn More</Button>
